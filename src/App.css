@@ -1,28 +1,27 @@
-.inputField{
-  width:800px;
+.inputField {
+  width: 800px;
   min-height: 200px;
   height: fit-content;
   font-size: 22px;
   padding: 10px 5px;
 }
 
-header{
-  padding: 20px 40px, 
+header {
+  padding: 20px 40px;
 }
 
-main{
-  padding:0 40px
+main {
+  padding: 0 40px;
 }
 
-@media (max-width:700px){
-  .inputField{
-    width:100%
+@media (max-width: 700px) {
+  .inputField {
+    width: 100%;
   }
-  header{
+  header {
     padding: 10px 20px;
   }
-  main{
-    padding:0 20px;
+  main {
+    padding: 0 20px;
   }
 }
-
