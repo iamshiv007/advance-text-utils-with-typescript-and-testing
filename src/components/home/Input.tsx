@@ -1,4 +1,4 @@
-import { FC, Dispatch, SetStateAction, ChangeEvent,KeyboardEvent } from "react";
+import { FC, Dispatch, SetStateAction, ChangeEvent } from "react";
 
 type inputProps = {
   setWordsCount: Dispatch<SetStateAction<number>>;
@@ -26,7 +26,6 @@ const Input: FC<inputProps> = ({ setWordsCount, setCharactersCount }) => {
         placeholder="Start typing, or copy and paste your document here...
         "
         style={{ whiteSpace: "pre-wrap" }} // Add this style
-        // onKeyDown={handleEnterKey}
         onChange={handleChange}
       />
     </div>
