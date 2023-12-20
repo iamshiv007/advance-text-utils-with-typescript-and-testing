@@ -5,3 +5,24 @@
   font-size: 22px;
   padding: 10px 5px;
 }
+
+header{
+  padding: 20px 40px, 
+}
+
+main{
+  padding:0 40px
+}
+
+@media (max-width:700px){
+  .inputField{
+    width:100%
+  }
+  header{
+    padding: 10px 20px;
+  }
+  main{
+    padding:0 20px;
+  }
+}
+
