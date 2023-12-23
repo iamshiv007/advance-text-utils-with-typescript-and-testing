@@ -3,11 +3,14 @@ import { FC, Dispatch, SetStateAction, ChangeEvent } from "react";
 type inputProps = {
   setWordCount: Dispatch<SetStateAction<number>>;
   setCharacterCount: Dispatch<SetStateAction<number>>;
+  text:string;
+  setText:Dispatch<SetStateAction<string>>;
 };
 
-const Input: FC<inputProps> = ({ setWordCount, setCharacterCount }) => {
+const Input: FC<inputProps> = ({ setWordCount, setCharacterCount, text, setText }) => {
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const { value } = e.target;
+    setText(value)
     if (value === "") {
       setWordCount(0);
       setCharacterCount(0);
@@ -26,6 +29,7 @@ const Input: FC<inputProps> = ({ setWordCount, setCharacterCount }) => {
         placeholder="Start typing, or copy and paste your document here...
         "
         onChange={handleChange}
+        value={text}
       />
     </div>
   );
