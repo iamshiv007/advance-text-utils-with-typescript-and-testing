@@ -1,15 +1,18 @@
 import '@testing-library/jest-dom'
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Input from "../components/home/Input";
 
 test("test the Input component", () => {
   const setWordCountMock = jest.fn();
   const setCharacterCountMock = jest.fn();
+  const setTextMock = jest.fn();
 
   render(
     <Input
       setWordCount={setWordCountMock}
       setCharacterCount={setCharacterCountMock}
+      text="abc"
+      setText={setTextMock}
     />
   );
 
@@ -21,6 +24,5 @@ test("test the Input component", () => {
   ) as HTMLTextAreaElement;
   expect(input).toBeInTheDocument();
 
-  fireEvent.change(input, { target: { value: "abc" } });
   expect(input.value).toBe("abc");
 });
