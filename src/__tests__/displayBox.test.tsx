@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
 import { render, screen } from "@testing-library/react";
-import WordCounter from "../components/home/WordCounter";
+import DisplayBox from "../components/home/DisplayBox";
 
 test("Renders the wordCounter component", () => {
-  render(<WordCounter wordsCount={10} charactersCount={50} />);
+  render(<DisplayBox wordCount={10} characterCount={50} />);
 
   const wordCount = screen.getByText("10 Words")
   const characterCount = screen.getByText("50 Characters")

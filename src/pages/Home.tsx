@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Input from "../components/home/Input";
-import WordCounter from "../components/home/WordCounter";
+import WordCounter from "../components/home/DisplayBox";
 
 const Home = () => {
-  const [wordsCount, setWordsCount] = useState<number>(0);
-  const [charactersCount, setCharactersCount] = useState<number>(0);
+  const [wordCount, setWordCount] = useState<number>(0);
+  const [characterCount, setCharacterCount] = useState<number>(0);
 
   return (
     <main
@@ -14,10 +14,10 @@ const Home = () => {
         flexDirection: "column",
       }}
     >
-      <WordCounter wordsCount={wordsCount} charactersCount={charactersCount} />
+      <WordCounter wordCount={wordCount} characterCount={characterCount} />
       <Input
-        setWordsCount={setWordsCount}
-        setCharactersCount={setCharactersCount}
+        setWordCount={setWordCount}
+        setCharacterCount={setCharacterCount}
       />
     </main>
   );

@@ -1,22 +1,22 @@
 import { FC, Dispatch, SetStateAction, ChangeEvent } from "react";
 
 type inputProps = {
-  setWordsCount: Dispatch<SetStateAction<number>>;
-  setCharactersCount: Dispatch<SetStateAction<number>>;
+  setWordCount: Dispatch<SetStateAction<number>>;
+  setCharacterCount: Dispatch<SetStateAction<number>>;
 };
 
-const Input: FC<inputProps> = ({ setWordsCount, setCharactersCount }) => {
+const Input: FC<inputProps> = ({ setWordCount, setCharacterCount }) => {
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const { value } = e.target;
     if (value === "") {
-      setWordsCount(0);
-      setCharactersCount(0);
+      setWordCount(0);
+      setCharacterCount(0);
       return;
     }
     const wordsArray = value.match(/\b\w+\b/g) || [];
-    setWordsCount(wordsArray.length);
+    setWordCount(wordsArray.length);
     const charactersCount = value.replace(/[\n\r]/g, "").length;
-    setCharactersCount(charactersCount);
+    setCharacterCount(charactersCount);
   };
 
   return (

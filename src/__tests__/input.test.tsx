@@ -3,13 +3,13 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Input from "../components/home/Input";
 
 test("test the Input component", () => {
-  const setWordsCountMock = jest.fn();
-  const setCharactersCountMock = jest.fn();
+  const setWordCountMock = jest.fn();
+  const setCharacterCountMock = jest.fn();
 
   render(
     <Input
-      setWordsCount={setWordsCountMock}
-      setCharactersCount={setCharactersCountMock}
+      setWordCount={setWordCountMock}
+      setCharacterCount={setCharacterCountMock}
     />
   );
 
