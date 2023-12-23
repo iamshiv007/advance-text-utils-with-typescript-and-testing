@@ -17,7 +17,7 @@ const Home = () => {
       }}
     >
       <WordCounter wordCount={wordCount} characterCount={characterCount} />
-      <ButtonGroup />
+      <ButtonGroup text={text} setText={setText} />
       <Input
         setWordCount={setWordCount}
         setCharacterCount={setCharacterCount}
