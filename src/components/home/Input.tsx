@@ -25,7 +25,6 @@ const Input: FC<inputProps> = ({ setWordsCount, setCharactersCount }) => {
         className="inputField"
         placeholder="Start typing, or copy and paste your document here...
         "
-        style={{ whiteSpace: "pre-wrap" }} // Add this style
         onChange={handleChange}
       />
     </div>
